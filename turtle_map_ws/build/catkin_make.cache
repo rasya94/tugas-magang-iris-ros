@@ -1,2 +1,0 @@
-my_robot_package
--DCATKIN_DEVEL_PREFIX=/home/rasya/Documents/ROBOTIK/ROS/tugas_turtle/turtle_map_ws/devel -DCMAKE_INSTALL_PREFIX=/home/rasya/Documents/ROBOTIK/ROS/tugas_turtle/turtle_map_ws/install -G Unix Makefiles
