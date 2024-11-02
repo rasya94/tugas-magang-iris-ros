@@ -7,7 +7,7 @@
 
 using namespace std;
 
-void move_turtle(ros::Publisher &pub_data, double linear_x, double linear_y, double angular_z = 0)
+void moveTurtle(ros::Publisher &pub_data, double linear_x, double linear_y, double angular_z = 0)
 {
     geometry_msgs::Twist msg;
     msg.linear.x = linear_x;
@@ -55,13 +55,13 @@ int main(int argc, char **argv)
     ros::Duration(1).sleep();
 
     // R
-    move_turtle(pub, 0, 1.5);
+    moveTurtle(pub, 0, 1.5);
 
-    move_turtle(pub, 0.5, 0);
-    move_turtle(pub, 1, 0, -180);
-    move_turtle(pub, 0.4, 0);
+    moveTurtle(pub, 0.5, 0);
+    moveTurtle(pub, 1, 0, -180);
+    moveTurtle(pub, 0.4, 0);
 
-    move_turtle(pub, -0.75, 0.85);
+    moveTurtle(pub, -0.75, 0.85);
 
 
     respawn(nh, "turtle1", 2.75, 5, 0);
@@ -69,50 +69,50 @@ int main(int argc, char **argv)
     
     // A
 
-    move_turtle(pub, 0.5, 1.5);
-    move_turtle(pub, 0.5, -1.5);
-    move_turtle(pub, -0.2, 0.6);
-    move_turtle(pub, -0.5, 0);
+    moveTurtle(pub, 0.5, 1.5);
+    moveTurtle(pub, 0.5, -1.5);
+    moveTurtle(pub, -0.2, 0.6);
+    moveTurtle(pub, -0.5, 0);
 
     respawn(nh, "turtle1", 4.1, 5, 0);
     ros::Duration(1).sleep();
 
     // S
 
-    move_turtle(pub, 0.5, 0);
-    move_turtle(pub, 1.1, 0, 180);
-    move_turtle(pub, 0.3, 0);
-    move_turtle(pub, 1.1, 0, -180);
-    move_turtle(pub, 0.5, 0);
+    moveTurtle(pub, 0.5, 0);
+    moveTurtle(pub, 1.1, 0, 180);
+    moveTurtle(pub, 0.3, 0);
+    moveTurtle(pub, 1.1, 0, -180);
+    moveTurtle(pub, 0.5, 0);
 
     respawn(nh, "turtle1", 5.4, 5.4, 0);
     ros::Duration(1).sleep();
 
     // Y
 
-    move_turtle(pub, 0, 0, -90);
-    move_turtle(pub, 1.6, 0, 180);
-    move_turtle(pub, 1, 0);
-    move_turtle(pub, -1.6, 0, -180);
+    moveTurtle(pub, 0, 0, -90);
+    moveTurtle(pub, 1.6, 0, 180);
+    moveTurtle(pub, 1, 0);
+    moveTurtle(pub, -1.6, 0, -180);
 
     respawn(nh, "turtle1", 6.8, 5, 0);
     ros::Duration(1).sleep();
 
     // A
 
-    move_turtle(pub, 0.5, 1.5);
-    move_turtle(pub, 0.5, -1.5);
-    move_turtle(pub, -0.2, 0.6);
-    move_turtle(pub, -0.5, 0);
+    moveTurtle(pub, 0.5, 1.5);
+    moveTurtle(pub, 0.5, -1.5);
+    moveTurtle(pub, -0.2, 0.6);
+    moveTurtle(pub, -0.5, 0);
 
     respawn(nh, "turtle1", 8.5, 5, 0);
     ros::Duration(1).sleep();
 
     // N
 
-    move_turtle(pub, 0, 1.5);
-    move_turtle(pub, 1, -1.5);
-    move_turtle(pub, 0, 1.5);
+    moveTurtle(pub, 0, 1.5);
+    moveTurtle(pub, 1, -1.5);
+    moveTurtle(pub, 0, 1.5);
 
     return 0;
 }
